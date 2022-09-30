@@ -1,1 +1,362 @@
-placeholder
+html {
+  background-color: #020659;
+}
+
+body {
+  width: 375px;
+  margin: 0 auto;
+  font-family: 'raleway', optima, sans-serif;
+  background-color: #ffffff;
+}
+
+header {
+  padding-top: 60px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-image: linear-gradient(to right, #2104d9, #020659)
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+header p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+nav {
+    width: 375px;
+    background-color: #030A8C;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+nav h2 {
+  visibility: hidden;
+  height: auto;
+}
+
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    margin: 0;
+    padding: 0;
+    background-color: #2104d9;
+    list-style: none;
+    text-align: center;
+}
+
+li a {
+  display: block;
+  padding: 20px 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+[href="#home"] {
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 90px;
+  padding: 16px 16px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #590242;
+}
+
+h3 {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+#trending h3 {
+  margin-top: -5px;
+}
+
+a:hover, input:hover {
+  background-color: #590242
+}
+
+.scroll {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.scroll section {
+  margin: 10px;
+  position: relative;
+}
+
+.scroll div {
+  position: absolute;
+  top: 251px;
+  background color: rgba(255, 255, 255, .75);
+  padding: 5px;
+  height: 50px;
+  width: 350px;
+}
+
+dl {
+    color: #590242;
+    display: flex;
+    margin-top: -10px;   
+}
+
+#trending h3, #trending dl {
+    color: #590242;
+}
+
+dt {
+    font-style: italic;
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+dd {
+    font-size: 16px;
+    margin: 0;
+}
+
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+.more {
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 32px;
+}
+
+.more:hover {
+    background-color: #020659;
+}
+
+#playlists p, #curated p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+footer {
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 10px; 
+    color: #590242;
+}
+
+
+
+
+label {
+    cursor: pointer;
+    display: block;
+    padding: 10px 20px;
+    margin-top: -10px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+
+#trending ::-webkit-scrollbar {
+  width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+  background: #059242;
+  border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+  background: #020659
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+  width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+  box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+  background: #020659;
+  border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+
+
+@media screen and (min-width:834px) {
+  body{
+    width: 834px;
+  }
+  
+  nav {
+    width: 834px;
+  }
+  
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        width: 834px;
+    }
+    label span, input {
+        display: none;
+    }
+      li {
+        padding: 0;
+        margin: 0;
+    }
+    li a, [href="#home"] {
+        box-sizing: border-box; 
+        padding: 12px;
+        height: 100%; 
+    }
+    [href="#home"] {
+        position: static; 
+    }
+    nav a {
+        display: block; 
+    }
+    main {
+        display: grid;
+        grid-template-columns: 417px 417px;
+    }
+    h2 {
+        margin-left: 25px;
+    }
+    #trending {
+        width: 834px;
+        grid-column: 1/3;
+    }
+    #playlists {
+        width: 417px;
+        grid-column: 1/2;
+    }
+    #curated {
+        width: 417px;
+        grid-column: 2/3;
+    }
+    #playlists section, #curated section {
+        height: 120px;
+        width: 360px;
+    }
+    #playlists img, #curated img {
+        float: left;
+        margin-right: 10px;
+        padding-bottom:10px;
+    }
+    #playlists section h3, #curated section h3 {
+        position: absolute;
+        top: 0px;
+        left: 195px;
+        box-align: center;
+    }
+    #playlists p, #curated p {
+        position: absolute;
+        top: 27px;
+        left: 170px;
+        padding-right: 30px;
+    }
+    #playlists .scroll, #curated .scroll {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 515px;
+        grid-template-rows: repeat(5, 40px);
+        grid-template-columns: 417px;
+        row-gap: 120px;
+    }
+    .more {
+        float: right;
+        margin: 10px 32px 30px 0;
+    }
+}
+
+
+
+audio::-webkit-media-controls-mute-button {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+  background-color: rgba(255, 255, 255, .5);
+}
