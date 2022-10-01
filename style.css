@@ -17,6 +17,15 @@ header {
   background-image: linear-gradient(to right, #2104d9, #020659)
 }
 
+header h1 {
+  line-height: normal;
+}
+
+header p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
 h1, h2, h3 {
   text-transform: uppercase;
   font-weight: bold;
@@ -29,13 +38,14 @@ h1 {
   line-height: 2em;
 }
 
-header p {
+p {
   font-size: 16px;
   color: #ffffff;
 }
 
 nav {
     width: 375px;
+    height: 60px;
     background-color: #030A8C;
     position: absolute;
     top: 0;
@@ -80,6 +90,7 @@ li a {
 h2 {
   font-size: 20px;
   color: #590242;
+  line-height: 2em;
 }
 
 h3 {
@@ -164,6 +175,14 @@ audio {
 #playlists p, #curated p {
     font-size: 14px;
     color: #ffffff;
+}
+
+#playlists .scroll{
+  background-color: #2699fb;
+}
+
+#curated .scroll{
+  background-color: #030a8c;
 }
 
 footer {
@@ -270,15 +289,17 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         overflow: visible;
         position: absolute;
         top: 0;
+        margin: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 63px;
         align-items: center;
         width: 834px;
     }
     label span, input {
         display: none;
     }
-      li {
+    li {
         padding: 0;
         margin: 0;
     }
